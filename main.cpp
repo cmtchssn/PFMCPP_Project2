@@ -15,17 +15,18 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ short
+ long
+ float
+ double
+ char
+ bool
+
+
+
+
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -56,10 +57,29 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int coins = 5;
+    int pockets = -4;
+    short smallerNumber = 987;
+    short martin = -777;
+    short stop = 29;
+    long bigNumber = -2389898;
+    long realBig = 239838943;
+    long seriouslyLarge = 2000000000;
+    float decimals = 0.5f;
+    float rootBeer = 123.48f;
+    float hover = 83838.355f;
+    double whiskey = 989898.34f;
+    double dutch = 23229939.1114f;
+    double dip = 71238.1487f;
+    char jerome = 'j';
+    char mike = 'm';
+    char peter = 'p';
+    bool preference = true;
+    bool state = false;
+    bool spool = false;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, coins, pockets, smallerNumber, martin, stop, bigNumber, realBig, seriouslyLarge, decimals, rootBeer, hover, whiskey, dutch, dip, jerome, mike, peter, preference, state, spool); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -73,43 +93,69 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1)int addition(int numA, int numB)
+ {
+    ignoreUnused(numA, numB);
+    return {};
+ }
+*/
+
+/*
+ 2)char pathFinder(char pathOrigin, char currentPath, char previousPath)
+ {
+     ignoreUnused(pathOrigin, currentPath, previousPath);
+     return {};
+ }
  */
 
 /*
- 2)
+ 3)float gpsFinder(float latitude, float longitude)
+ {
+     ignoreUnused(latitude, longitude);
+     return {};
+ }
  */
 
 /*
- 3)
+ 4)void playerCharacterMaker(int age, int height, char hairSelection, bool sunglasses)
+ {
+     ignoreUnused(age, height, hairSelection, sunglasses);
+ }
  */
 
 /*
- 4)
+ 5)void climateAnalysis(float dailyTemp, int dailyHumidity, bool dailyPrecipitation)
+ {
+     ignoreUnused(dailyTemp, dailyHumidity, dailyPrecipitation);
+ }
  */
 
 /*
- 5)
+ 6)char messageEncoder(char initialLetter)
+ {
+     ignoreUnused(initialLetter);
+     return {};
+ }
  */
 
 /*
- 6)
+ 7)long lightyearConversion(int distanceInLightyears, char measurementConversionUnit)
+ {
+     ignoreUnused(distanceInLightyears, measurementConversionUnit);
+     return {};
+ }
  */
 
 /*
- 7)
+ 8)double 
  */
 
 /*
- 8)
+ 9)bool
  */
 
 /*
- 9)
- */
-
-/*
- 10)
+ 10)void
  */
 
 /*
