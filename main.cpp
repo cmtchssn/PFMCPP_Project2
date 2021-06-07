@@ -92,83 +92,73 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)int addition(int numA, int numB)
- {
+
+int addition(int numA, int numB)
+{
     ignoreUnused(numA, numB);
     return {};
- }
-*/
+}
 
-/*
- 2)char pathFinder(char pathOrigin, char currentPath, char previousPath)
- {
-     ignoreUnused(pathOrigin, currentPath, previousPath);
-     return {};
- }
- */
 
-/*
- 3)float gpsFinder(float latitude, float longitude)
- {
-     ignoreUnused(latitude, longitude);
-     return {};
- }
- */
+char pathFinder(char currentPath, char previousPath, char pathOrigin = 'A')
+{
+    ignoreUnused(pathOrigin, currentPath, previousPath);
+    return {};
+}
 
-/*
- 4)void playerCharacterMaker(int age, int height, char hairSelection, bool sunglasses)
- {
-     ignoreUnused(age, height, hairSelection, sunglasses);
- }
- */
 
-/*
- 5)void climateAnalysis(float dailyTemp, int dailyHumidity, bool dailyPrecipitation)
- {
-     ignoreUnused(dailyTemp, dailyHumidity, dailyPrecipitation);
- }
- */
+float gpsFinder(float latitude, float longitude)
+{
+    ignoreUnused(latitude, longitude);
+    return {};
+}
 
-/*
- 6)char messageEncoder(char initialLetter)
- {
-     ignoreUnused(initialLetter);
-     return {};
- }
- */
 
-/*
- 7)long lightyearConversion(int distanceInLightyears, char measurementConversionUnit)
- {
-     ignoreUnused(distanceInLightyears, measurementConversionUnit);
-     return {};
- }
- */
+void playerCharacterMaker(int age, char hairSelection, int height = 175, bool sunglasses = false)
+{
+    ignoreUnused(age, height, hairSelection, sunglasses);
+}
 
-/*
- 8)double atomicMassCalculator(float elementMass, int elementQuantity, char elementSymbol)
- {
-     ignoreUnused(elementMass, elementQuantity, elementSymbol);
-     return {};
- }
- */
 
-/*
- 9)bool smallerThanABreadBox(float length, float width, float height, char measureUnit)
- {
-     ignoreUnused(length, width, height, measureUnit);
-     return {};
- }
- */
+void climateAnalysis(float dailyTemp, int dailyHumidity, bool dailyPrecipitation)
+{
+    ignoreUnused(dailyTemp, dailyHumidity, dailyPrecipitation);
+}
 
-/*
- 10)void horizontalRotation(float degreesRotation)
- {
-     ignoreUnused(degreesRotation);
-     return {};
- }
- */
+
+char messageEncoder(char initialLetter)
+{
+    ignoreUnused(initialLetter);
+    return {};
+}
+
+
+long lightyearConversion(int distanceInLightyears, char measurementConversionUnit = 'K')
+{
+    ignoreUnused(distanceInLightyears, measurementConversionUnit);
+    return {};
+}
+
+
+double atomicMassCalculator(float elementMass, char elementSymbol, int elementQuantity = 1)
+{
+    ignoreUnused(elementMass, elementSymbol, elementQuantity);
+    return {};
+}
+
+
+bool smallerThanABreadBox(float length, float width, float height, char measureUnit = 'c')
+{
+    ignoreUnused(length, width, height, measureUnit);
+    return {};
+}
+
+
+void horizontalRotation(float degreesRotation = 15.0f)
+{
+    ignoreUnused(degreesRotation);
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -189,28 +179,28 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
+    auto sum = addition(2, 4);
     
-    //2)
+    auto nextPath = pathFinder('C', 'B');
     
-    //3)
+    auto myGpsCoords = gpsFinder(36.056595f, -112.125092f);
     
-    //4)
+    playerCharacterMaker(35, 'D', 182, true);
     
-    //5)
+    climateAnalysis(82.2f, 76, true);
     
-    //6)
+    auto hiddenMessageKey = messageEncoder('X');
     
-    //7)
+    auto distanceInKilometers = lightyearConversion(70050);
     
-    //8)
+    auto atomicWeightSum = atomicMassCalculator(1.008, 'H', 19);
     
-    //9)
+    auto cubeArea = smallerThanABreadBox(19.5f, 9.0f, 6.75f);
     
-    //10)
+    horizontalRotation(25.0f);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, sum, nextPath, myGpsCoords, hiddenMessageKey, distanceInKilometers, atomicWeightSum, cubeArea);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
