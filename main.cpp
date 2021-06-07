@@ -147,15 +147,27 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 
 /*
- 8)double 
+ 8)double atomicMassCalculator(float elementMass, int elementQuantity, char elementSymbol)
+ {
+     ignoreUnused(elementMass, elementQuantity, elementSymbol);
+     return {};
+ }
  */
 
 /*
- 9)bool
+ 9)bool smallerThanABreadBox(float length, float width, float height, char measureUnit)
+ {
+     ignoreUnused(length, width, height, measureUnit);
+     return {};
+ }
  */
 
 /*
- 10)void
+ 10)void horizontalRotation(float degreesRotation)
+ {
+     ignoreUnused(degreesRotation);
+     return {};
+ }
  */
 
 /*
