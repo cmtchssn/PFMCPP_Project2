@@ -15,17 +15,18 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ short
+ long
+ float
+ double
+ char
+ bool
+
+
+
+
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -56,10 +57,29 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int coins = 5;
+    int pockets = -4;
+    short smallerNumber = 987;
+    short martin = -777;
+    short stop = 29;
+    long bigNumber = -2389898;
+    long realBig = 239838943;
+    long seriouslyLarge = 2000000000;
+    float decimals = 0.5f;
+    float rootBeer = 123.48f;
+    float hover = 83838.355f;
+    double whiskey = 989898.34;
+    double dutch = 23229939.1114;
+    double dip = 71238.1487;
+    char jerome = 'j';
+    char mike = 'm';
+    char peter = 'p';
+    bool preference = true;
+    bool state = false;
+    bool spool = false;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, coins, pockets, smallerNumber, martin, stop, bigNumber, realBig, seriouslyLarge, decimals, rootBeer, hover, whiskey, dutch, dip, jerome, mike, peter, preference, state, spool); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -72,45 +92,73 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)
- */
 
-/*
- 2)
- */
+int addition(int numA, int numB)
+{
+    ignoreUnused(numA, numB);
+    return {};
+}
 
-/*
- 3)
- */
 
-/*
- 4)
- */
+char pathFinder(char currentPath, char previousPath, char pathOrigin = 'A')
+{
+    ignoreUnused(pathOrigin, currentPath, previousPath);
+    return {};
+}
 
-/*
- 5)
- */
 
-/*
- 6)
- */
+float gpsFinder(float latitude, float longitude)
+{
+    ignoreUnused(latitude, longitude);
+    return {};
+}
 
-/*
- 7)
- */
 
-/*
- 8)
- */
+void playerCharacterMaker(int age, char hairSelection, int height = 175, bool sunglasses = false)
+{
+    ignoreUnused(age, height, hairSelection, sunglasses);
+}
 
-/*
- 9)
- */
 
-/*
- 10)
- */
+void climateAnalysis(float dailyTemp, int dailyHumidity, bool dailyPrecipitation)
+{
+    ignoreUnused(dailyTemp, dailyHumidity, dailyPrecipitation);
+}
+
+
+char messageEncoder(char initialLetter)
+{
+    ignoreUnused(initialLetter);
+    return {};
+}
+
+
+long lightyearConversion(int distanceInLightyears, char measurementConversionUnit = 'K')
+{
+    ignoreUnused(distanceInLightyears, measurementConversionUnit);
+    return {};
+}
+
+
+double atomicMassCalculator(float elementMass, char elementSymbol, int elementQuantity = 1)
+{
+    ignoreUnused(elementMass, elementSymbol, elementQuantity);
+    return {};
+}
+
+
+bool smallerThanABreadBox(float length, float width, float height, char measureUnit = 'c')
+{
+    ignoreUnused(length, width, height, measureUnit);
+    return {};
+}
+
+
+void horizontalRotation(float degreesRotation = 15.0f)
+{
+    ignoreUnused(degreesRotation);
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -131,28 +179,28 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
+    auto sum = addition(2, 4);
     
-    //2)
+    auto nextPath = pathFinder('C', 'B');
     
-    //3)
+    auto myGpsCoords = gpsFinder(36.056595f, -112.125092f);
     
-    //4)
+    playerCharacterMaker(35, 'D', 182, true);
     
-    //5)
+    climateAnalysis(82.2f, 76, true);
     
-    //6)
+    auto hiddenMessageKey = messageEncoder('X');
     
-    //7)
+    auto distanceInKilometers = lightyearConversion(70050);
     
-    //8)
+    auto atomicWeightSum = atomicMassCalculator(1.008f, 'H', 19);
     
-    //9)
+    auto cubeArea = smallerThanABreadBox(19.5f, 9.0f, 6.75f);
     
-    //10)
+    horizontalRotation(25.0f);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, sum, nextPath, myGpsCoords, hiddenMessageKey, distanceInKilometers, atomicWeightSum, cubeArea);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
