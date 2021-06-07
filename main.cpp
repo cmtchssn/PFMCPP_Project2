@@ -68,9 +68,9 @@ void variableDeclarations()
     float decimals = 0.5f;
     float rootBeer = 123.48f;
     float hover = 83838.355f;
-    double whiskey = 989898.34f;
-    double dutch = 23229939.1114f;
-    double dip = 71238.1487f;
+    double whiskey = 989898.34;
+    double dutch = 23229939.1114;
+    double dip = 71238.1487;
     char jerome = 'j';
     char mike = 'm';
     char peter = 'p';
@@ -193,7 +193,7 @@ int main()
     
     auto distanceInKilometers = lightyearConversion(70050);
     
-    auto atomicWeightSum = atomicMassCalculator(1.008, 'H', 19);
+    auto atomicWeightSum = atomicMassCalculator(1.008f, 'H', 19);
     
     auto cubeArea = smallerThanABreadBox(19.5f, 9.0f, 6.75f);
     
